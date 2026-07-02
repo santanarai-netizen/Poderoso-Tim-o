@@ -1,0 +1,465 @@
+/* ===========================
+   GOOGLE FONTS
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ===========================
+LOADER
+=========================== */
+
+#loader{
+
+    position:fixed;
+    width:100%;
+    height:100vh;
+
+    background:#000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+#loader img{
+
+    width:170px;
+
+    animation:girar 3s infinite linear;
+
+}
+
+@keyframes girar{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* ===========================
+HEADER
+=========================== */
+
+header{
+
+    position:fixed;
+
+    width:100%;
+
+    padding:20px 10%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(15px);
+
+    z-index:999;
+
+    transition:.5s;
+
+}
+
+header.ativo{
+
+    background:#111;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.logo img{
+
+    width:55px;
+
+}
+
+.logo h2{
+
+    color:#fff;
+
+    font-size:26px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav ul li a{
+
+    font-size:18px;
+
+    transition:.4s;
+
+}
+
+nav ul li a:hover{
+
+    color:#C8102E;
+
+}
+
+#menu{
+
+    display:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+
+    width:100%;
+
+    height:100vh;
+
+    background:url(img/arena.jpg);
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.75);
+
+}
+
+.hero-text{
+
+    position:relative;
+
+    text-align:center;
+
+    z-index:10;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:25px;
+
+    margin-bottom:40px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:18px 45px;
+
+    background:#C8102E;
+
+    border-radius:40px;
+
+    transition:.5s;
+
+    font-weight:bold;
+
+}
+
+.btn:hover{
+
+    background:#fff;
+
+    color:#000;
+
+    transform:translateY(-6px);
+
+}
+
+/* ===========================
+SEÇÕES
+=========================== */
+
+section{
+
+    padding:100px 10%;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:60px;
+
+    position:relative;
+
+}
+
+section h2::after{
+
+    content:"";
+
+    width:120px;
+
+    height:4px;
+
+    background:#C8102E;
+
+    position:absolute;
+
+    bottom:-15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+/* ===========================
+CARDS HISTÓRIA
+=========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+}
+
+.card{
+
+    background:#111;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.5s;
+
+    border:2px solid transparent;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#C8102E;
+
+    box-shadow:0 0 25px #C8102E;
+
+}
+
+.card i{
+
+    font-size:55px;
+
+    color:#C8102E;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    font-size:30px;
+
+}
+
+/* ===========================
+TÍTULOS
+=========================== */
+
+.container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.titulo-card{
+
+    background:#111;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.titulo-card:hover{
+
+    transform:scale(1.08);
+
+    background:#C8102E;
+
+}
+
+.titulo-card i{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.titulo-card h3{
+
+    font-size:55px;
+
+}
+
+.titulo-card span{
+
+    font-size:20px;
+
+}
+
+/* ===========================
+JOGADORES
+=========================== */
+
+.idolos .container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+}
+
+.jogador{
+
+    background:#111;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.5s;
+
+}
+
+.jogador:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.jogador img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+}
+
+.jogador h3{
+
+    padding:20px;
+
+    text-align:center;
+
+}
